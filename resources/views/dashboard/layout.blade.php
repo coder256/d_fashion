@@ -11,7 +11,7 @@
     <meta name="description" content="Apprenticeship.">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <title>Voting</title>
+    <title>@yield('title')</title>
 
     <link rel="icon" href="{{ asset('images/android-chrome-512x512.png') }}" sizes="512x512" type="image/png">
     <link rel="icon" href="{{ asset('images/android-chrome-192x192.png') }}" sizes="192x192" type="image/png">
@@ -143,39 +143,18 @@
                         <li>
                             <a href="javascript:;">
                                 <i class="metismenu-icon pe-7s-bookmarks"></i>
-                                Posts
-                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <i class="metismenu-icon">
-                                        </i>Create
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="metismenu-icon">
-                                        </i>List
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <i class="metismenu-icon pe-7s-bookmarks"></i>
                                 Products
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                             </a>
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('products.create') }}">
                                         <i class="metismenu-icon">
                                         </i>Create
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
+                                    <a href="{{ route('products.index') }}">
                                         <i class="metismenu-icon">
                                         </i>List
                                     </a>

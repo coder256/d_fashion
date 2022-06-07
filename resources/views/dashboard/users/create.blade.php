@@ -17,8 +17,7 @@
                             <label for="first_name">
                                 <span class="text-danger">*</span> First Name
                             </label>
-                            <input name="first_name" id="first_name" type="text" class="form-control"
-                                   required>
+                            <input name="first_name" id="first_name" type="text" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -26,8 +25,7 @@
                             <label for="last_name">
                                 <span class="text-danger">*</span> Last Name
                             </label>
-                            <input name="last_name" id="last_name" type="text" class="form-control"
-                                   required>
+                            <input name="last_name" id="last_name" type="text" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -35,8 +33,7 @@
                             <label for="tel">
                                 <span class="text-danger">*</span> Tel
                             </label>
-                            <input name="tel" id="tel" type="text" class="form-control" pattern="^[\+]?(\d{10}|\d{12})$"
-                                   required>
+                            <input name="tel" id="tel" type="text" class="form-control" pattern="^[\+]?(\d{10}|\d{12})$" required>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -44,8 +41,7 @@
                             <label for="email">
                                 <span class="text-danger">*</span> Email
                             </label>
-                            <input name="email" id="email" type="email" class="form-control"
-                                   required>
+                            <input name="email" id="email" type="email" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-md-6">

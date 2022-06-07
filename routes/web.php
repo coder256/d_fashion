@@ -3,6 +3,7 @@
 require __DIR__.'/auth.php';
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +30,6 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.home');
 
 Route::resource('dashboard/users', UserController::class)->middleware(['auth']);
+
+Route::resource('dashboard/products', ProductController::class)->middleware(['auth']);
 
