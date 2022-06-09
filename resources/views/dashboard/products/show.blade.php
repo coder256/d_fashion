@@ -6,7 +6,7 @@
     <div class="main-card mb-3 card">
         <div class="card-body">
             <div class="mb-3 card card-body text-center">
-                <h3>Product</h3>
+                <h3>Product (<a href="{{route('products.edit', [$product])}}">edit</a>)</h3>
             </div>
             <form>
                 <div class="form-row">

@@ -106,7 +106,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('dashboard.products.edit', compact('product'));
     }
 
     /**
@@ -118,7 +118,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'gender' => ['required', 'string', 'max:10'],
+            'stock' => ['required', 'numeric'],
+            'shirt_sleeve' => ['nullable', 'numeric'],
+            'chest' => ['nullable', 'numeric'],
+            'thigh' => ['nullable', 'numeric'],
+            'waist' => ['nullable', 'numeric'],
+            'trouser_length' => ['nullable', 'numeric'],
+        ]);
+
+        if ($product->update($request->all())) {
+            session()->flash('message_success', 'Product updated');
+        } else {
+            session()->flash('message_fail', 'Product update failed');
+        }
+
+        return redirect('/dashboard/products/' . $product->id );
     }
 
     /**

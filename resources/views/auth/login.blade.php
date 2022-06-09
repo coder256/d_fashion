@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="text-center"><img src="{{ asset('images/logo.png') }}" alt="logo" height="100"></h1>
+                <h1 class="text-center"><a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="logo" height="100"></a></h1>
             </div>
             <div class="col-md-8">
                 <div class="card">

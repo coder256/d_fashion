@@ -1,0 +1,14 @@
+.font-size-sm {
+    font-size: small;
+}
+
+.bg-gray-light {
+    background-color: #fbf8f8;
+}
+
+.img-table {
+    max-height: 150px;
+    background-color: #eee;
+    border: 3px solid #dee2e6;
+    border-radius: 0.25rem;
+}

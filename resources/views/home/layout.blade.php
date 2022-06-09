@@ -40,13 +40,23 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('home.scan') }}">Vote</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="{{ route('dashboard.home') }}">Dashboard</a>--}}
-                {{--</li>--}}
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ route('dashboard') }}">Dashboard</a>
+                </li>
             </ul>
+            <form class="d-flex" role="search" action="{{ route('home.search') }}">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="s">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            @if(Auth::check())
+                {{--<button class="btn btn-outline-dark ms-4">Logout</button>--}}
+                <form id="logOut" action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-dark ms-4">Logout</button>
+                </form>
+            @else
+                <a href="{{ route('login') }}"><button class="btn btn-outline-dark ms-4">Login</button></a>
+            @endif
         </div>
     </div>
 </nav>

@@ -21,6 +21,8 @@
     <link rel="icon" href="{{ asset('images/favicon.ico') }}">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
     @yield('css_includes')
 </head>
@@ -140,6 +142,12 @@
                 <div class="app-sidebar__inner">
                     <ul class="vertical-nav-menu">
                         <li class="app-sidebar__heading">Dashboard</li>
+                        <li>
+                            <a href="{{ route('home')}}">
+                                <i class="metismenu-icon fa fa-home"></i>
+                                Site
+                            </a>
+                        </li>
                         <li>
                             <a href="javascript:;">
                                 <i class="metismenu-icon pe-7s-bookmarks"></i>

@@ -9,9 +9,9 @@
                 <h3>Products</h3>
             </div>
             @if(!$products->isEmpty())
-                <p>
+                {{--<p>
                     <button id="download-button" class="btn btn-info">Download CSV</button>
-                </p>
+                </p>--}}
                 <table style="width: 100%;" id="example"
                        class="table table-hover table-striped table-bordered">
                     <thead>
@@ -27,7 +27,7 @@
                     <tbody>
                     @foreach($products as $product)
                         <tr>
-                            <td><img src="{{ asset("items/".$product->main_image) }}" alt="product_image" class="img-thumbnail"></td>
+                            <td><img src="{{ asset("items/".$product->main_image) }}" alt="product_image" class="img-table"></td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->gender }}</td>
                             <td>{{ $product->stock }}</td>
